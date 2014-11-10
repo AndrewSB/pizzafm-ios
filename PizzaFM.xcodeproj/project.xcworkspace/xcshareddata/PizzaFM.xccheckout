@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CAD29D80-DE0C-426F-8584-BF7AEFE75BD9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PizzaFM</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D2EB2A886EE863015D50AADBD29877B5938CA02</key>
+		<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PizzaFM.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D2EB2A886EE863015D50AADBD29877B5938CA02</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D2EB2A886EE863015D50AADBD29877B5938CA02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D2EB2A886EE863015D50AADBD29877B5938CA02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PizzaFM-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
