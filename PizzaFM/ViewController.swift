@@ -10,12 +10,13 @@ import UIKit
 import MediaPlayer
 
 class ViewController: UIViewController {
+    let player: MPMoviePlayerViewController = MPMoviePlayerViewController(contentURL: NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u"))
     
-    let player: MPMoviePlayerController = MPMoviePlayerController()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        play()
+        player.moviePlayer.movieSourceType = .Streaming
+        self.presentViewController(player, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,11 +25,15 @@ class ViewController: UIViewController {
     }
 
     func play() {
-        player.contentURL = NSURL(fileURLWithPath: "http://dir.xiph.org/listen/1042227/listen.m3u")
-        player.movieSourceType = .Streaming
-        player.prepareToPlay()
-        self.view.addSubview(player.view)
-        player.play()
+        player.moviePlayer.play()
+    }
+    
+    func pause() {
+        player.moviePlayer.pause()
+    }
+
+    @IBAction func hitPlayButton(sender: AnyObject) {
+        pause()
     }
 
 }
