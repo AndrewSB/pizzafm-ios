@@ -8,15 +8,23 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
 
 class ViewController: UIViewController {
-    let player: MPMoviePlayerViewController = MPMoviePlayerViewController(contentURL: NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u"))
+    //let player: MPMoviePlayerViewController = MPMoviePlayerViewController(contentURL: NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u"))
+    var player: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        player.moviePlayer.movieSourceType = .Streaming
-        self.presentViewController(player, animated: true, completion: nil)
+        var error: NSError?
+        let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
+        
+
+        player = AVPlayer(URL: url)
+        player?.play()
+        println("say lol")
+        println(player?.currentItem.description)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,11 +33,11 @@ class ViewController: UIViewController {
     }
 
     func play() {
-        player.moviePlayer.play()
+        player?.play()
     }
     
     func pause() {
-        player.moviePlayer.pause()
+        player?.pause()
     }
 
     @IBAction func hitPlayButton(sender: AnyObject) {
