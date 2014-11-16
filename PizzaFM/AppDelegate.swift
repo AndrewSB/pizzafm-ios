@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        let session = AVAudioSession.sharedInstance()
+        let sessionCategory = kAudioSessionCategory_MediaPlayback;
+        var setCategoryError: NSError?
+        
+        session.setCategory(AVAudioSessionCategoryPlayback, error: &setCategoryError)
+        
         return true
     }
 
