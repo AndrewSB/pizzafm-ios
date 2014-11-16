@@ -25,6 +25,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		46A40BD81A1867E700275A4E /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4606682319E7EEE800DB3ACC /* PizzaFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4606682719E7EEE800DB3ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +135,7 @@
 				4606681F19E7EEE800DB3ACC /* Sources */,
 				4606682019E7EEE800DB3ACC /* Frameworks */,
 				4606682119E7EEE800DB3ACC /* Resources */,
+				46A40BD81A1867E700275A4E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,6 +421,7 @@
 				4606684419E7EEE800DB3ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4606684519E7EEE800DB3ACC /* Build configuration list for PBXNativeTarget "PizzaFMTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +430,7 @@
 				4606684719E7EEE800DB3ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

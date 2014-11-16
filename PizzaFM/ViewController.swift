@@ -10,8 +10,11 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
+
 class ViewController: UIViewController {
-    //let player: MPMoviePlayerViewController = MPMoviePlayerViewController(contentURL: NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u"))
+
+    @IBOutlet weak var songName: UILabel!
+    @IBOutlet weak var artistName: UILabel!
     var player: AVPlayer?
     
     override func viewDidLoad() {
@@ -20,11 +23,11 @@ class ViewController: UIViewController {
         var error: NSError?
         let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
         
-
+        getTrackInfo()
+        
+        
         player = AVPlayer(URL: url)
         player?.play()
-        println("say lol")
-        println(player?.currentItem.description)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +41,18 @@ class ViewController: UIViewController {
     
     func pause() {
         player?.pause()
+    }
+    
+    func getTrackInfo() -> Dictionary<String, String> {
+        Alamofire.request(.GET, "https://www.kimonolabs.com/api/5yo6lcpi?apikey=3b3b2eb5e50239231dcbace9f81e392a")
+            .response { (data) in
+                let jsonData = SwiftyJSON.JSON(data as NSData)
+                if let songName = json[0]["user"]["name"].string {
+                    
+                }
+        }
+        
+        return ["nu": "nu"];
     }
 
     @IBAction func hitPlayButton(sender: AnyObject) {
