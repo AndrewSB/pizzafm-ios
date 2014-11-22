@@ -44,13 +44,26 @@ class ViewController: UIViewController {
     }
     
     func getTrackInfo() -> Dictionary<String, String> {
-        Alamofire.request(.GET, "https://www.kimonolabs.com/api/5yo6lcpi?apikey=3b3b2eb5e50239231dcbace9f81e392a")
-            .response { (data) in
-                let jsonData = SwiftyJSON.JSON(data as NSData)
-                if let songName = json[0]["user"]["name"].string {
-                    
-                }
-        }
+        var url : String = "https://www.kimonolabs.com/api/5yo6lcpi?apikey=3b3b2eb5e50239231dcbace9f81e392a"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+            
+            if (jsonResult != nil) {
+                let result: NSDictionary! = jsonResult["results"] as NSDictionary
+                let collection1: NSDictionary! = result["collection1"] as NSDictionary
+                println(collection1["songInfo"])
+            } else {
+                println(error)
+            }
+            
+            
+        })
+        
         
         return ["nu": "nu"];
     }

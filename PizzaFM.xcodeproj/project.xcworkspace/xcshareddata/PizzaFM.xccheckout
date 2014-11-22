@@ -26,7 +26,7 @@
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
 		<string>../../Alamofire</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../../SwiftyJSON/</string>
+		<string>../../SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
