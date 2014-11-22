@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-5y-rGU">
-                                <rect key="frame" x="240" y="114" width="120" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="PBl-ux-Gui"/>
-                                    <constraint firstAttribute="width" secondItem="giC-5y-rGU" secondAttribute="height" multiplier="1:1" id="i9U-W7-gOI"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="Oval 13 + Triangle 6">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1X-Ap-ub6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.64667659997940063" green="0.89437484741210938" blue="0.92886912822723389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,33 +34,69 @@
                                 <color key="textColor" red="0.38034743070602417" green="0.38041785359382629" blue="0.3803429901599884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="W6c-eq-ggy">
-                                <rect key="frame" x="268" y="473" width="65" height="64"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="web" translatesAutoresizingMaskIntoConstraints="NO" id="4EJ-uj-85v">
-                                <rect key="frame" x="438" y="473" width="64" height="64"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook 4" translatesAutoresizingMaskIntoConstraints="NO" id="8Hc-P2-fmS">
-                                <rect key="frame" x="98" y="473" width="64" height="64"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L3-nM-gmR">
+                                <rect key="frame" x="61" y="503" width="52" height="52"/>
+                                <state key="normal" image="Facebook 4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUH-SO-HNx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-jS-VGA">
+                                <rect key="frame" x="265" y="503" width="52" height="52"/>
+                                <state key="normal" image="twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAV-c3-7G8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80w-H9-4Fl">
+                                <rect key="frame" x="478" y="503" width="52" height="52"/>
+                                <state key="normal" image="web">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="webButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dL-9x-4t8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-5y-rGU">
+                                <rect key="frame" x="240" y="114" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="PBl-ux-Gui"/>
+                                    <constraint firstAttribute="width" secondItem="giC-5y-rGU" secondAttribute="height" multiplier="1:1" id="i9U-W7-gOI"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Oval 13 + Triangle 6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stateButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExF-8i-a3I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="4EJ-uj-85v" secondAttribute="trailing" constant="82" id="0xU-Ht-GVP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Hc-P2-fmS" secondAttribute="bottom" constant="63" id="6n3-yf-KBr"/>
+                            <constraint firstItem="6r8-jS-VGA" firstAttribute="leading" secondItem="7L3-nM-gmR" secondAttribute="trailing" constant="152" id="9TB-YH-q62"/>
                             <constraint firstItem="B1X-Ap-ub6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BIF-Qc-f9c"/>
-                            <constraint firstItem="8Hc-P2-fmS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="82" id="Ecn-Th-azv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6c-eq-ggy" secondAttribute="bottom" constant="63" id="YzH-5p-1Qi"/>
                             <constraint firstAttribute="centerX" secondItem="giC-5y-rGU" secondAttribute="centerX" id="Z9t-qM-AVV"/>
-                            <constraint firstAttribute="centerX" secondItem="W6c-eq-ggy" secondAttribute="centerX" constant="-0.5" id="a3m-Xy-XHE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4EJ-uj-85v" secondAttribute="bottom" constant="63" id="dYI-fi-xC2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6r8-jS-VGA" secondAttribute="bottom" constant="45" id="bwX-og-bp5"/>
                             <constraint firstAttribute="centerX" secondItem="foE-cy-1dH" secondAttribute="centerX" constant="-0.5" id="e8l-PM-G1U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80w-H9-4Fl" secondAttribute="bottom" constant="45" id="iE7-xq-ySI"/>
                             <constraint firstItem="foE-cy-1dH" firstAttribute="top" secondItem="giC-5y-rGU" secondAttribute="bottom" constant="87" id="mEF-qg-H8C"/>
                             <constraint firstItem="giC-5y-rGU" firstAttribute="top" secondItem="B1X-Ap-ub6" secondAttribute="bottom" constant="70" id="nPO-K6-FfO"/>
+                            <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" constant="9" id="pXg-1Y-cVb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7L3-nM-gmR" secondAttribute="bottom" constant="45" id="rPa-Uv-gBz"/>
                             <constraint firstItem="B1X-Ap-ub6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sm9-bt-cvP"/>
                             <constraint firstItem="B1X-Ap-ub6" firstAttribute="centerX" secondItem="giC-5y-rGU" secondAttribute="centerX" id="w2e-v6-1aU"/>
+                            <constraint firstItem="80w-H9-4Fl" firstAttribute="leading" secondItem="6r8-jS-VGA" secondAttribute="trailing" constant="161" id="yH1-nn-aAw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navBar" destination="B1X-Ap-ub6" id="ve3-fy-MHG"/>
+                        <outlet property="nowPlayingLabel" destination="foE-cy-1dH" id="iVT-zi-7hd"/>
+                        <outlet property="stateButton" destination="giC-5y-rGU" id="Mk4-K9-r9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

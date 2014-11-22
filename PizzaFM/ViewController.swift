@@ -13,9 +13,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var songName: UILabel!
-    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var stateButton: UIButton!
+    @IBOutlet weak var nowPlayingLabel: UILabel!
     var player: AVPlayer?
+    var isPlaying: Bool = false
+    let playImage = UIImage(named: "Oval 13 + Triangle 6")
+    let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
         var error: NSError?
         let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
         
-        getTrackInfo()
+        //getTrackInfo()
         
         
         player = AVPlayer(URL: url)
@@ -37,10 +41,14 @@ class ViewController: UIViewController {
 
     func play() {
         player?.play()
+        isPlaying = true
+        stateButton.setImage(pauseImage, forState: .Normal)
     }
     
     func pause() {
         player?.pause()
+        isPlaying = false
+        stateButton.setImage(playImage, forState: .Normal)
     }
     
     func getTrackInfo() -> Dictionary<String, String> {
@@ -68,9 +76,22 @@ class ViewController: UIViewController {
         return ["nu": "nu"];
     }
 
-    @IBAction func hitPlayButton(sender: AnyObject) {
-        pause()
+    @IBAction func stateButtonHit(sender: AnyObject) {
+        if isPlaying {
+            pause()
+        } else {
+            play()
+        }
     }
-
+    @IBAction func facebookButtonHit(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://sheu.ru")!)
+    }
+    @IBAction func twitterButtonHit(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://sheu.ru")!)
+    }
+    @IBAction func webButtonHit(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://pizzafm.org")!)
+    }
+    
 }
 
