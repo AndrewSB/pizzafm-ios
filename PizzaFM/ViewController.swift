@@ -17,9 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var stateButton: UIButton!
     @IBOutlet weak var nowPlayingLabel: UILabel!
     var player: AVPlayer?
-    var isPlaying: Bool = false
+    var isPlaying: Bool = true
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
+    @IBOutlet weak var navItem: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class ViewController: UIViewController {
         
         //getTrackInfo()
         
+        navBar.
+        navItem.titleView = UIImageView(image: UIImage(named: "Oval 1 + Triangle 1"))
         
         player = AVPlayer(URL: url)
         player?.play()

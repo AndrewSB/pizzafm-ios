@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="barTintColor" red="0.64667659997940063" green="0.89437484741210938" blue="0.92886912822723389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="giF-Dy-XoJ"/>
+                                    <navigationItem id="giF-Dy-XoJ"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALT-J : FITZPLEASURE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foE-cy-1dH">
@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="height" constant="120" id="PBl-ux-Gui"/>
                                     <constraint firstAttribute="width" secondItem="giC-5y-rGU" secondAttribute="height" multiplier="1:1" id="i9U-W7-gOI"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Oval 13 + Triangle 6">
+                                <state key="normal" title="Button" image="Oval 13 + Triangle 7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -94,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="navBar" destination="B1X-Ap-ub6" id="ve3-fy-MHG"/>
+                        <outlet property="navItem" destination="giF-Dy-XoJ" id="3n3-HH-1Z1"/>
                         <outlet property="nowPlayingLabel" destination="foE-cy-1dH" id="iVT-zi-7hd"/>
                         <outlet property="stateButton" destination="giC-5y-rGU" id="Mk4-K9-r9l"/>
                     </connections>
@@ -105,7 +106,7 @@
     </scenes>
     <resources>
         <image name="Facebook 4" width="69" height="69"/>
-        <image name="Oval 13 + Triangle 6" width="227" height="227"/>
+        <image name="Oval 13 + Triangle 7" width="227" height="227"/>
         <image name="twitter" width="69" height="69"/>
         <image name="web" width="69" height="69"/>
     </resources>
