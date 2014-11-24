@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,11 +33,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALT-J : FITZPLEASURE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foE-cy-1dH">
-                                <rect key="frame" x="200" y="321" width="201" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALT-J : FITZPLEASURE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foE-cy-1dH">
+                                <rect key="frame" x="87" y="389" width="201" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="RcO-fO-Rq3"/>
                                     <constraint firstAttribute="width" constant="201" id="gha-e9-4y9"/>
@@ -45,17 +46,8 @@
                                 <color key="textColor" red="0.38034743070602417" green="0.38041785359382629" blue="0.3803429901599884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L3-nM-gmR">
-                                <rect key="frame" x="61" y="503" width="52" height="52"/>
-                                <state key="normal" image="Facebook 4">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUH-SO-HNx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-jS-VGA">
-                                <rect key="frame" x="265" y="503" width="52" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-jS-VGA">
+                                <rect key="frame" x="169" y="577" width="57" height="57"/>
                                 <state key="normal" image="twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,8 +55,8 @@
                                     <action selector="twitterButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAV-c3-7G8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80w-H9-4Fl">
-                                <rect key="frame" x="478" y="503" width="52" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80w-H9-4Fl">
+                                <rect key="frame" x="282" y="577" width="57" height="57"/>
                                 <state key="normal" image="web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,8 +64,8 @@
                                     <action selector="webButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dL-9x-4t8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-5y-rGU">
-                                <rect key="frame" x="240" y="114" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-5y-rGU">
+                                <rect key="frame" x="127" y="182" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="PBl-ux-Gui"/>
                                     <constraint firstAttribute="width" secondItem="giC-5y-rGU" secondAttribute="height" multiplier="1:1" id="i9U-W7-gOI"/>
@@ -85,22 +77,32 @@
                                     <action selector="stateButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExF-8i-a3I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L3-nM-gmR">
+                                <rect key="frame" x="36" y="577" width="57" height="57"/>
+                                <state key="normal" image="Facebook 4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUH-SO-HNx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6r8-jS-VGA" firstAttribute="leading" secondItem="7L3-nM-gmR" secondAttribute="trailing" constant="152" id="9TB-YH-q62"/>
-                            <constraint firstAttribute="centerX" secondItem="giC-5y-rGU" secondAttribute="centerX" id="Z9t-qM-AVV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6r8-jS-VGA" secondAttribute="bottom" constant="45" id="bwX-og-bp5"/>
-                            <constraint firstAttribute="centerX" secondItem="foE-cy-1dH" secondAttribute="centerX" constant="-0.5" id="e8l-PM-G1U"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80w-H9-4Fl" secondAttribute="bottom" constant="45" id="iE7-xq-ySI"/>
+                            <constraint firstAttribute="centerX" secondItem="giC-5y-rGU" secondAttribute="centerX" constant="0.5" id="4Nr-P1-OgH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80w-H9-4Fl" secondAttribute="bottom" constant="33" id="7qf-q9-f3H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6r8-jS-VGA" secondAttribute="bottom" constant="33" id="BS0-UG-Ztd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7L3-nM-gmR" secondAttribute="bottom" constant="33" id="CDe-vv-bAv"/>
+                            <constraint firstAttribute="centerX" secondItem="foE-cy-1dH" secondAttribute="centerX" id="Nfj-NF-At0"/>
+                            <constraint firstItem="7L3-nM-gmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Rbn-lX-5GS"/>
+                            <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" constant="-10" id="RrX-hQ-YPD"/>
                             <constraint firstItem="foE-cy-1dH" firstAttribute="top" secondItem="giC-5y-rGU" secondAttribute="bottom" constant="87" id="mEF-qg-H8C"/>
-                            <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" constant="9" id="pXg-1Y-cVb"/>
-                            <constraint firstItem="giC-5y-rGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="pt9-sE-0Vp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7L3-nM-gmR" secondAttribute="bottom" constant="45" id="rPa-Uv-gBz"/>
-                            <constraint firstItem="80w-H9-4Fl" firstAttribute="leading" secondItem="6r8-jS-VGA" secondAttribute="trailing" constant="161" id="yH1-nn-aAw"/>
+                            <constraint firstItem="giC-5y-rGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="pt9-sE-0Vp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="80w-H9-4Fl" secondAttribute="trailing" constant="20" id="zJV-l7-vZ2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EVh-cQ-PHI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navItem" destination="EVh-cQ-PHI" id="8MY-nt-ZyA"/>
                         <outlet property="nowPlayingLabel" destination="foE-cy-1dH" id="iVT-zi-7hd"/>
@@ -113,9 +115,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Facebook 4" width="69" height="69"/>
+        <image name="Facebook 4" width="57" height="57"/>
         <image name="Oval 13 + Triangle 7" width="227" height="227"/>
-        <image name="twitter" width="69" height="69"/>
-        <image name="web" width="69" height="69"/>
+        <image name="twitter" width="57" height="57"/>
+        <image name="web" width="57" height="57"/>
     </resources>
 </document>
