@@ -19,15 +19,16 @@ class ViewController: UIViewController {
     var isPlaying: Bool = true
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
+    let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var error: NSError?
-        let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
-        
         navItem.titleView = UIImageView(image: UIImage(named: "Oval 1 + Triangle 1"))
         
+        getTrackInfo()
+        var getTrackInfoTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("getTrackInfo"), userInfo: nil, repeats: true)
+
         player = AVPlayer(URL: url)
         player?.play()
     }
@@ -44,34 +45,35 @@ class ViewController: UIViewController {
     }
     
     func pause() {
-        player?.pause()
+        player = nil
+        player = AVPlayer(URL: url)
         isPlaying = false
         stateButton.setImage(playImage, forState: .Normal)
     }
     
-    func getTrackInfo() -> Dictionary<String, String> {
+    func getTrackInfo() -> Void {
         var url : String = "https://www.kimonolabs.com/api/5yo6lcpi?apikey=3b3b2eb5e50239231dcbace9f81e392a"
-        var request : NSMutableURLRequest = NSMutableURLRequest()
-        request.URL = NSURL(string: url)
+        var request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.HTTPMethod = "GET"
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {data, urlResponse, error in
+            var jsonErrorOptional: NSError?
+            let jsonOptional: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &jsonErrorOptional)
             
-            if (jsonResult != nil) {
-                let result: NSDictionary! = jsonResult["results"] as NSDictionary
-                let collection1: NSDictionary! = result["collection1"] as NSDictionary
-                println(collection1["songInfo"])
-            } else {
-                println(error)
+            if let json = jsonOptional as? Dictionary<String, AnyObject> {
+                if let results = json["results"] as AnyObject! as? Dictionary<String, AnyObject> {
+                    if let collection1: AnyObject = results["collection1"] as AnyObject! {
+                        if let songInfo = collection1[0]["songInfo"] as? String {
+                            let songArray = songInfo.componentsSeparatedByString(" - ")
+                            println(songArray)
+                            self.nowPlayingLabel.text = String(songArray[0] + " : " + songArray[1])
+                        }
+                    }
+                }
             }
-            
-            
-        })
-        
-        
-        return ["nu": "nu"];
+        }
+        task.resume()
+        return
     }
 
     @IBAction func stateButtonHit(sender: AnyObject) {
