@@ -12,21 +12,13 @@
 	<dict>
 		<key>2D2EB2A886EE863015D50AADBD29877B5938CA02</key>
 		<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
-		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>https://github.com/Alamofire/Alamofire.git</string>
-		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>https://github.com/lingoer/SwiftyJSON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PizzaFM.xcodeproj</string>
+	<string>Source/PizzaFM.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2D2EB2A886EE863015D50AADBD29877B5938CA02</key>
-		<string>../..</string>
-		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>../../Alamofire</string>
-		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../../SwiftyJSON</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
@@ -40,25 +32,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>2D2EB2A886EE863015D50AADBD29877B5938CA02</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PizzaFM-iOS</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</string>
-			<key>IDESourceControlWCCName</key>
-			<string>SwiftyJSON</string>
 		</dict>
 	</array>
 </dict>

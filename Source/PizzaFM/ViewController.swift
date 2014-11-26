@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var stateButton: UIButton!
     @IBOutlet weak var nowPlayingLabel: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!
+    
     var player: AVPlayer?
     var isPlaying: Bool = true
+    let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
+    
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
-    let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +70,7 @@ class ViewController: UIViewController {
                             let songArray = songInfo.componentsSeparatedByString(" - ")
                             let songString = String(songArray[0] + " : " + songArray[1])
                             println(songString)
-                            self.nowPlayingLabel.text = songString
+                            self.changeNowPlayingLabel(songString)
                         }
                     }
                 }
@@ -76,6 +78,12 @@ class ViewController: UIViewController {
         }
         task.resume()
         return
+    }
+    
+    func changeNowPlayingLabel(s: String) -> Void {
+        self.nowPlayingLabel.text = s
+        self.nowPlayingLabel.numberOfLines = 0
+        self.nowPlayingLabel.sizeToFit()
     }
 
     @IBAction func stateButtonHit(sender: AnyObject) {
