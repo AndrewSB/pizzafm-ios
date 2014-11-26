@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         getTrackInfo()
         var getTrackInfoTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("getTrackInfo"), userInfo: nil, repeats: true)
 
+        self.nowPlayingLabel.text = "Say lol or nah and maybe or what say sex and lol"
         player = AVPlayer(URL: url)
         player?.play()
     }
@@ -65,8 +66,9 @@ class ViewController: UIViewController {
                     if let collection1: AnyObject = results["collection1"] as AnyObject! {
                         if let songInfo = collection1[0]["songInfo"] as? String {
                             let songArray = songInfo.componentsSeparatedByString(" - ")
-                            println(songArray)
-                            self.nowPlayingLabel.text = String(songArray[0] + " : " + songArray[1])
+                            let songString = String(songArray[0] + " : " + songArray[1])
+                            println(songString)
+                            self.nowPlayingLabel.text = songString
                         }
                     }
                 }

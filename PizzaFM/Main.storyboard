@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-jS-VGA">
-                                <rect key="frame" x="169" y="577" width="57" height="57"/>
+                                <rect key="frame" x="163.5" y="586" width="48" height="48"/>
                                 <state key="normal" image="twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80w-H9-4Fl">
-                                <rect key="frame" x="282" y="577" width="57" height="57"/>
+                                <rect key="frame" x="291" y="586" width="48" height="48"/>
                                 <state key="normal" image="web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L3-nM-gmR">
-                                <rect key="frame" x="36" y="577" width="57" height="57"/>
+                                <rect key="frame" x="36" y="586" width="48" height="48"/>
                                 <state key="normal" image="Facebook 4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -94,8 +94,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6r8-jS-VGA" secondAttribute="bottom" constant="33" id="BS0-UG-Ztd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7L3-nM-gmR" secondAttribute="bottom" constant="33" id="CDe-vv-bAv"/>
                             <constraint firstAttribute="centerX" secondItem="foE-cy-1dH" secondAttribute="centerX" id="Nfj-NF-At0"/>
+                            <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" id="R9g-Dg-PLo"/>
                             <constraint firstItem="7L3-nM-gmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Rbn-lX-5GS"/>
-                            <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" constant="-10" id="RrX-hQ-YPD"/>
                             <constraint firstItem="foE-cy-1dH" firstAttribute="top" secondItem="giC-5y-rGU" secondAttribute="bottom" constant="87" id="mEF-qg-H8C"/>
                             <constraint firstItem="giC-5y-rGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="pt9-sE-0Vp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="80w-H9-4Fl" secondAttribute="trailing" constant="20" id="zJV-l7-vZ2"/>
@@ -115,9 +115,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Facebook 4" width="57" height="57"/>
+        <image name="Facebook 4" width="48" height="48"/>
         <image name="Oval 13 + Triangle 7" width="227" height="227"/>
-        <image name="twitter" width="57" height="57"/>
-        <image name="web" width="57" height="57"/>
+        <image name="twitter" width="48" height="48"/>
+        <image name="web" width="48" height="48"/>
     </resources>
 </document>
