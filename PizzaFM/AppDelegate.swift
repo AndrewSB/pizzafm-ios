@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let session = AVAudioSession.sharedInstance()
-        let sessionCategory = kAudioSessionCategory_MediaPlayback;
         var setCategoryError: NSError?
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: &setCategoryError)
         
-        session.setCategory(AVAudioSessionCategoryPlayback, error: &setCategoryError)
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+        
         return true
     }
 
