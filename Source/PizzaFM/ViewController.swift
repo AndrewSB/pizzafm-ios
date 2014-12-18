@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var nowPlayingLabel: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!
     
+    //Add song string code
+    
     var player: AVPlayer?
     var isPlaying: Bool = true
-    let url =  NSURL(string: "http://dir.xiph.org/listen/1042227/listen.m3u")
+    let url =  NSURL(string: "http://dir.xiph.org/listen/4474/listen.m3u")
     
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
@@ -30,8 +32,6 @@ class ViewController: UIViewController {
         
         getTrackInfo()
         var getTrackInfoTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("getTrackInfo"), userInfo: nil, repeats: true)
-
-        self.nowPlayingLabel.text = "Say lol or nah and maybe or what say sex and lol"
         player = AVPlayer(URL: url)
         player?.play()
     }
@@ -42,14 +42,13 @@ class ViewController: UIViewController {
     }
 
     func play() {
-        player?.play()
+        player = AVPlayer(URL: url)
         isPlaying = true
         stateButton.setImage(pauseImage, forState: .Normal)
     }
     
     func pause() {
         player = nil
-        player = AVPlayer(URL: url)
         isPlaying = false
         stateButton.setImage(playImage, forState: .Normal)
     }
@@ -68,8 +67,15 @@ class ViewController: UIViewController {
                     if let collection1: AnyObject = results["collection1"] as AnyObject! {
                         if let songInfo = collection1[0]["songInfo"] as? String {
                             let songArray = songInfo.componentsSeparatedByString(" - ")
-                            let songString = String(songArray[0] + " : " + songArray[1])
-                            println(songString)
+                            
+                            var songString = ""
+                            
+                            if (songArray.count < 2) {
+                                songString = String(songArray[0] + " : " + songArray[1])
+                            } else {
+                                songString = songInfo
+                            }
+                            println("reached songString\(songString)")
                             self.changeNowPlayingLabel(songString)
                         }
                     }
