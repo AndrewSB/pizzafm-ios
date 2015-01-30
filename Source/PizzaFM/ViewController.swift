@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     var player: AVPlayer?
     var isPlaying: Bool = true
-    let url =  NSURL(string: "http://dir.xiph.org/listen/1430752/listen.m3u")
+    let url =  NSURL(string: "http://dir.xiph.org/listen/5162/listen.m3u")
     
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
@@ -77,7 +77,10 @@ class ViewController: UIViewController {
                                 songString = songInfo
                             }
                             println("reached songString\(songString)")
-                            self.changeNowPlayingLabel(songString)
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                self.changeNowPlayingLabel(songString)
+                            });
                         }
                     }
                 }
@@ -91,6 +94,7 @@ class ViewController: UIViewController {
         self.nowPlayingLabel.text = s
         self.nowPlayingLabel.numberOfLines = 0
         self.nowPlayingLabel.sizeToFit()
+        println("\(nowPlayingLabel)")
     }
 
     @IBAction func stateButtonHit(sender: AnyObject) {
