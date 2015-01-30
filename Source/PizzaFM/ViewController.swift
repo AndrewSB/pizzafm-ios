@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     var player: AVPlayer?
     var isPlaying: Bool = true
-    let url =  NSURL(string: "http://dir.xiph.org/listen/4474/listen.m3u")
+    let url =  NSURL(string: "http://dir.xiph.org/listen/1430752/listen.m3u")
     
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         var getTrackInfoTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("getTrackInfo"), userInfo: nil, repeats: true)
         player = AVPlayer(URL: url)
         player?.play()
+        println(player)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,13 +43,13 @@ class ViewController: UIViewController {
     }
 
     func play() {
-        player = AVPlayer(URL: url)
+        player?.play()
         isPlaying = true
         stateButton.setImage(pauseImage, forState: .Normal)
     }
     
     func pause() {
-        player = nil
+        player?.pause()
         isPlaying = false
         stateButton.setImage(playImage, forState: .Normal)
     }
