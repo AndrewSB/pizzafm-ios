@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     func changeNowPlayingLabel(s: String) -> Void {
         self.nowPlayingLabel.text = s
         self.nowPlayingLabel.numberOfLines = 0
-        self.nowPlayingLabel.sizeToFit()
+        //self.nowPlayingLabel.sizeToFit()
         println("\(nowPlayingLabel)")
     }
 
