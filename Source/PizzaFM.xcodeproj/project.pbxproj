@@ -13,6 +13,7 @@
 		4606683319E7EEE800DB3ACC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4606683119E7EEE800DB3ACC /* LaunchScreen.xib */; };
 		4606683F19E7EEE800DB3ACC /* PizzaFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606683E19E7EEE800DB3ACC /* PizzaFMTests.swift */; };
 		462D7E8E1A200294003CD9C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462D7E8D1A200294003CD9C9 /* Main.storyboard */; };
+		464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464425081AEFFB000057EC0C /* ScheduleViewController.swift */; };
 		465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */; };
 		465CAAAB1A7C3CEB004873B6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA91A7C3CEB004873B6 /* Fabric.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		4606683D19E7EEE800DB3ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4606683E19E7EEE800DB3ACC /* PizzaFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaFMTests.swift; sourceTree = "<group>"; };
 		462D7E8D1A200294003CD9C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		464425081AEFFB000057EC0C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		465CAAA91A7C3CEB004873B6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			children = (
 				4606682819E7EEE800DB3ACC /* AppDelegate.swift */,
 				4606682A19E7EEE800DB3ACC /* ViewController.swift */,
+				464425081AEFFB000057EC0C /* ScheduleViewController.swift */,
 				462D7E8D1A200294003CD9C9 /* Main.storyboard */,
 				4606682F19E7EEE800DB3ACC /* Images.xcassets */,
 				4606683119E7EEE800DB3ACC /* LaunchScreen.xib */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */,
 				4606682B19E7EEE800DB3ACC /* ViewController.swift in Sources */,
 				4606682919E7EEE800DB3ACC /* AppDelegate.swift in Sources */,
 			);
