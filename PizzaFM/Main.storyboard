@@ -27,7 +27,7 @@
         <!--main VC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="main VC" id="BYZ-38-t0r" customClass="ViewController" customModule="PizzaFM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="main VC" id="BYZ-38-t0r" customClass="InitialViewController" customModule="PizzaFM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giC-5y-rGU">
-                                <rect key="frame" x="100" y="89" width="120" height="120"/>
+                                <rect key="frame" x="100" y="78" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="PBl-ux-Gui"/>
                                     <constraint firstAttribute="width" secondItem="giC-5y-rGU" secondAttribute="height" multiplier="1:1" id="i9U-W7-gOI"/>
@@ -76,12 +76,6 @@
                                     <action selector="stateButtonHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExF-8i-a3I"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-yB-UfO">
-                                <rect key="frame" x="0.0" y="11" width="320" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Y2l-bW-RQy"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mml-Od-IWC">
                                 <rect key="frame" x="0.0" y="421" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.50196078431372548" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,10 +91,22 @@
                                     <segue destination="xXj-n2-85i" kind="show" id="z3b-LQ-g6l"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zND-V9-gb5">
-                                <rect key="frame" x="40" y="244" width="240" height="128"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zND-V9-gb5">
+                                <rect key="frame" x="0.0" y="241" width="320" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff2-j7-2AS">
+                                <rect key="frame" x="82" y="208" width="156" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza-background" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-yB-UfO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jht-yB-UfO" secondAttribute="height" multiplier="2337:423" id="lBC-ce-dn7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,12 +120,15 @@
                             <constraint firstAttribute="centerX" secondItem="giC-5y-rGU" secondAttribute="centerX" id="Io8-ZD-Nbg"/>
                             <constraint firstItem="Jht-yB-UfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LRP-G6-HDV"/>
                             <constraint firstItem="giC-5y-rGU" firstAttribute="top" secondItem="Jht-yB-UfO" secondAttribute="bottom" constant="20" id="OII-xU-X3J"/>
+                            <constraint firstItem="Ff2-j7-2AS" firstAttribute="top" secondItem="giC-5y-rGU" secondAttribute="bottom" constant="10" id="Oda-UX-8vu"/>
                             <constraint firstAttribute="centerX" secondItem="6r8-jS-VGA" secondAttribute="centerX" id="R9g-Dg-PLo"/>
                             <constraint firstItem="7L3-nM-gmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Rbn-lX-5GS"/>
-                            <constraint firstItem="zND-V9-gb5" firstAttribute="top" secondItem="giC-5y-rGU" secondAttribute="bottom" constant="44" id="Xfn-m1-Q92"/>
+                            <constraint firstItem="zND-V9-gb5" firstAttribute="top" secondItem="Ff2-j7-2AS" secondAttribute="bottom" constant="33" id="hSx-fg-MAs"/>
+                            <constraint firstItem="Ff2-j7-2AS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="66" id="qeD-gf-jLc"/>
                             <constraint firstAttribute="trailing" secondItem="Jht-yB-UfO" secondAttribute="trailing" id="s3L-wy-c9R"/>
                             <constraint firstItem="mml-Od-IWC" firstAttribute="top" secondItem="zND-V9-gb5" secondAttribute="bottom" id="tpc-RE-YbK"/>
-                            <constraint firstItem="Jht-yB-UfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="11" id="vtT-wA-ART"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ff2-j7-2AS" secondAttribute="trailing" constant="66" id="vV6-CB-d1i"/>
+                            <constraint firstItem="Jht-yB-UfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vtT-wA-ART"/>
                             <constraint firstItem="mml-Od-IWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="vwL-0O-dfV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="80w-H9-4Fl" secondAttribute="trailing" constant="20" id="zJV-l7-vZ2"/>
                         </constraints>
@@ -128,6 +137,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="navItem" destination="EVh-cQ-PHI" id="8MY-nt-ZyA"/>
+                        <outlet property="nowPlayingLabel" destination="Ff2-j7-2AS" id="7Dg-1l-tjS"/>
                         <outlet property="stateButton" destination="giC-5y-rGU" id="Mk4-K9-r9l"/>
                         <outlet property="webView" destination="zND-V9-gb5" id="axU-AS-W7A"/>
                     </connections>
@@ -136,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="Z5R-Fi-aVh">
             <objects>
-                <viewController id="xXj-n2-85i" sceneMemberID="viewController">
+                <viewController id="xXj-n2-85i" customClass="ScheduleViewController" customModule="PizzaFM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sOr-KO-Ajs"/>
                         <viewControllerLayoutGuide type="bottom" id="3tr-Zl-LAb"/>
@@ -163,6 +173,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="scheduleTableView" destination="G5b-o1-pFU" id="KEn-Zh-yna"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSA-hg-c9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,6 +185,7 @@
     <resources>
         <image name="Facebook 4" width="48" height="48"/>
         <image name="Oval 13 + Triangle 7" width="227" height="227"/>
+        <image name="pizza-background" width="2337" height="423"/>
         <image name="twitter" width="48" height="48"/>
         <image name="web" width="48" height="48"/>
     </resources>

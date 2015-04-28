@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InitialViewController.swift
 //  PizzaFM
 //
 //  Created by Andrew Breckenridge on 10/10/14.
@@ -11,25 +11,23 @@ import MediaPlayer
 import AVFoundation
 
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
     @IBOutlet weak var stateButton: UIButton!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var nowPlayingLabel: UILabel!
     
     //Add song string code
     
     var player: AVPlayer?
     var isPlaying: Bool = true
-    let url =  NSURL(string: "http://dir.xiph.org/listen/5162/listen.m3u")
+    let url =  NSURL(string: "http://128.174.91.29:8009/pizzaFM")
     
     let playImage = UIImage(named: "Oval 13 + Triangle 6")
     let pauseImage = UIImage(named: "Oval 13 + Triangle 7")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        navItem.titleView = UIImageView(image: UIImage(named: "Oval 1 + Triangle 1"))
-        
         player = AVPlayer(URL: url)
         player?.play()
         println(player)
@@ -56,11 +54,12 @@ class ViewController: UIViewController {
             play()
         }
     }
+    
     @IBAction func facebookButtonHit(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://sheu.ru")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/pizzafm")!)
     }
     @IBAction func twitterButtonHit(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://sheu.ru")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/pizzaradio")!)
     }
     @IBAction func webButtonHit(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "http://pizzafm.org")!)

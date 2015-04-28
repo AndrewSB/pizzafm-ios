@@ -14,11 +14,11 @@
 		<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Source/PizzaFM.xcodeproj</string>
+	<string>PizzaFM.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2D2EB2A886EE863015D50AADBD29877B5938CA02</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AndrewSB/PizzaFM-iOS.git</string>

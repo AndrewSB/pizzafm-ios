@@ -8,27 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		4606682919E7EEE800DB3ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606682819E7EEE800DB3ACC /* AppDelegate.swift */; };
-		4606682B19E7EEE800DB3ACC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606682A19E7EEE800DB3ACC /* ViewController.swift */; };
+		4606682B19E7EEE800DB3ACC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606682A19E7EEE800DB3ACC /* InitialViewController.swift */; };
 		4606683019E7EEE800DB3ACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4606682F19E7EEE800DB3ACC /* Images.xcassets */; };
 		4606683319E7EEE800DB3ACC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4606683119E7EEE800DB3ACC /* LaunchScreen.xib */; };
-		4606683F19E7EEE800DB3ACC /* PizzaFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4606683E19E7EEE800DB3ACC /* PizzaFMTests.swift */; };
 		462D7E8E1A200294003CD9C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462D7E8D1A200294003CD9C9 /* Main.storyboard */; };
 		464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464425081AEFFB000057EC0C /* ScheduleViewController.swift */; };
+		4644250B1AEFFECA0057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
+		4644250C1AEFFFD10057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
+		4644250D1AEFFFD10057EC0C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */; };
 		465CAAAB1A7C3CEB004873B6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA91A7C3CEB004873B6 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4606683919E7EEE800DB3ACC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4606681B19E7EEE800DB3ACC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4606682219E7EEE800DB3ACC;
-			remoteInfo = PizzaFM;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
+		4644250E1AEFFFD10057EC0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4644250D1AEFFFD10057EC0C /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46A40BD81A1867E700275A4E /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,14 +48,14 @@
 		4606682319E7EEE800DB3ACC /* PizzaFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4606682719E7EEE800DB3ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4606682819E7EEE800DB3ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4606682A19E7EEE800DB3ACC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4606682A19E7EEE800DB3ACC /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4606682F19E7EEE800DB3ACC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4606683219E7EEE800DB3ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4606683819E7EEE800DB3ACC /* PizzaFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4606683D19E7EEE800DB3ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4606683E19E7EEE800DB3ACC /* PizzaFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaFMTests.swift; sourceTree = "<group>"; };
 		462D7E8D1A200294003CD9C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		464425081AEFFB000057EC0C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		4644250A1AEFFECA0057EC0C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		465CAAA91A7C3CEB004873B6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,14 +66,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */,
+				4644250B1AEFFECA0057EC0C /* Alamofire.framework in Frameworks */,
 				465CAAAB1A7C3CEB004873B6 /* Fabric.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4606683519E7EEE800DB3ACC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4644250C1AEFFFD10057EC0C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +78,7 @@
 		4606681A19E7EEE800DB3ACC = {
 			isa = PBXGroup;
 			children = (
-				465CAAAC1A7C3D1C004873B6 /* Fabric Frameworks */,
+				465CAAAC1A7C3D1C004873B6 /* Library */,
 				4606682519E7EEE800DB3ACC /* PizzaFM */,
 				4606683B19E7EEE800DB3ACC /* PizzaFMTests */,
 				4606682419E7EEE800DB3ACC /* Products */,
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				4606682319E7EEE800DB3ACC /* PizzaFM.app */,
-				4606683819E7EEE800DB3ACC /* PizzaFMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4606682819E7EEE800DB3ACC /* AppDelegate.swift */,
-				4606682A19E7EEE800DB3ACC /* ViewController.swift */,
+				4606682A19E7EEE800DB3ACC /* InitialViewController.swift */,
 				464425081AEFFB000057EC0C /* ScheduleViewController.swift */,
 				462D7E8D1A200294003CD9C9 /* Main.storyboard */,
 				4606682F19E7EEE800DB3ACC /* Images.xcassets */,
@@ -135,13 +132,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		465CAAAC1A7C3D1C004873B6 /* Fabric Frameworks */ = {
+		465CAAAC1A7C3D1C004873B6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4644250A1AEFFECA0057EC0C /* Alamofire.framework */,
 				465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */,
 				465CAAA91A7C3CEB004873B6 /* Fabric.framework */,
 			);
-			name = "Fabric Frameworks";
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +154,7 @@
 				4606682119E7EEE800DB3ACC /* Resources */,
 				46A40BD81A1867E700275A4E /* Copy Frameworks */,
 				465CAAA71A7C3CDA004873B6 /* ShellScript */,
+				4644250E1AEFFFD10057EC0C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,24 +164,6 @@
 			productName = PizzaFM;
 			productReference = 4606682319E7EEE800DB3ACC /* PizzaFM.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4606683719E7EEE800DB3ACC /* PizzaFMTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4606684519E7EEE800DB3ACC /* Build configuration list for PBXNativeTarget "PizzaFMTests" */;
-			buildPhases = (
-				4606683419E7EEE800DB3ACC /* Sources */,
-				4606683519E7EEE800DB3ACC /* Frameworks */,
-				4606683619E7EEE800DB3ACC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4606683A19E7EEE800DB3ACC /* PBXTargetDependency */,
-			);
-			name = PizzaFMTests;
-			productName = PizzaFMTests;
-			productReference = 4606683819E7EEE800DB3ACC /* PizzaFMTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,11 +176,7 @@
 				TargetAttributes = {
 					4606682219E7EEE800DB3ACC = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = JQUR3MJ3GB;
-					};
-					4606683719E7EEE800DB3ACC = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 4606682219E7EEE800DB3ACC;
+						DevelopmentTeam = 2Z475Y2H59;
 					};
 				};
 			};
@@ -217,7 +194,6 @@
 			projectRoot = "";
 			targets = (
 				4606682219E7EEE800DB3ACC /* PizzaFM */,
-				4606683719E7EEE800DB3ACC /* PizzaFMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,13 +206,6 @@
 				462D7E8E1A200294003CD9C9 /* Main.storyboard in Resources */,
 				4606683319E7EEE800DB3ACC /* LaunchScreen.xib in Resources */,
 				4606683019E7EEE800DB3ACC /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4606683619E7EEE800DB3ACC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,28 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */,
-				4606682B19E7EEE800DB3ACC /* ViewController.swift in Sources */,
+				4606682B19E7EEE800DB3ACC /* InitialViewController.swift in Sources */,
 				4606682919E7EEE800DB3ACC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4606683419E7EEE800DB3ACC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4606683F19E7EEE800DB3ACC /* PizzaFMTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4606683A19E7EEE800DB3ACC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4606682219E7EEE800DB3ACC /* PizzaFM */;
-			targetProxy = 4606683919E7EEE800DB3ACC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4606683119E7EEE800DB3ACC /* LaunchScreen.xib */ = {
@@ -386,8 +339,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PizzaFM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,44 +356,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PizzaFM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		4606684619E7EEE800DB3ACC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PizzaFMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaFM.app/PizzaFM";
-			};
-			name = Debug;
-		};
-		4606684719E7EEE800DB3ACC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PizzaFMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaFM.app/PizzaFM";
 			};
 			name = Release;
 		};
@@ -459,15 +382,6 @@
 			buildConfigurations = (
 				4606684319E7EEE800DB3ACC /* Debug */,
 				4606684419E7EEE800DB3ACC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4606684519E7EEE800DB3ACC /* Build configuration list for PBXNativeTarget "PizzaFMTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4606684619E7EEE800DB3ACC /* Debug */,
-				4606684719E7EEE800DB3ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
