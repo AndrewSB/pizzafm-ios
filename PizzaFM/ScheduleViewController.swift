@@ -12,6 +12,12 @@ import Alamofire
 class ScheduleViewController: UIViewController {
     @IBOutlet weak var scheduleTableView: UITableView!
     
+    var selectedFilter = 0
+    let filters = ["Date"]
+    let filterDictionary: [String: [String]] = ["Date": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sunday"]]
+    
+    var collapsed = [true,true,true,true,true,true,true]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +38,11 @@ class ScheduleViewController: UIViewController {
 
 extension ScheduleViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return filterDictionary[filters[0]]!.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return collapsed[section] ? 0 : 5
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

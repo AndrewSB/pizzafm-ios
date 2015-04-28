@@ -16,6 +16,7 @@
 		4644250B1AEFFECA0057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
 		4644250C1AEFFFD10057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
 		4644250D1AEFFFD10057EC0C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		464425181AF006F60057EC0C /* SLExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 464425171AF006F60057EC0C /* SLExpandableTableView.m */; };
 		465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */; };
 		465CAAAB1A7C3CEB004873B6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA91A7C3CEB004873B6 /* Fabric.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,9 @@
 		462D7E8D1A200294003CD9C9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		464425081AEFFB000057EC0C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		4644250A1AEFFECA0057EC0C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		464425151AF006F60057EC0C /* PizzaFM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PizzaFM-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		464425161AF006F60057EC0C /* SLExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExpandableTableView.h; path = Carthage/Checkouts/SLExpandableTableView/SLExpandableTableView/SLExpandableTableView.h; sourceTree = "<group>"; };
+		464425171AF006F60057EC0C /* SLExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLExpandableTableView.m; path = Carthage/Checkouts/SLExpandableTableView/SLExpandableTableView/SLExpandableTableView.m; sourceTree = "<group>"; };
 		465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		465CAAA91A7C3CEB004873B6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 		4606682619E7EEE800DB3ACC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				464425151AF006F60057EC0C /* PizzaFM-Bridging-Header.h */,
 				4606682719E7EEE800DB3ACC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -132,12 +137,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		465CAAAC1A7C3D1C004873B6 /* Library */ = {
+		464425121AF004D30057EC0C /* External */ = {
 			isa = PBXGroup;
 			children = (
+				464425161AF006F60057EC0C /* SLExpandableTableView.h */,
+				464425171AF006F60057EC0C /* SLExpandableTableView.m */,
 				4644250A1AEFFECA0057EC0C /* Alamofire.framework */,
 				465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */,
 				465CAAA91A7C3CEB004873B6 /* Fabric.framework */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		465CAAAC1A7C3D1C004873B6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				464425121AF004D30057EC0C /* External */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -232,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464425181AF006F60057EC0C /* SLExpandableTableView.m in Sources */,
 				464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */,
 				4606682B19E7EEE800DB3ACC /* InitialViewController.swift in Sources */,
 				4606682919E7EEE800DB3ACC /* AppDelegate.swift in Sources */,
@@ -335,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,6 +362,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PizzaFM-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,6 +382,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PizzaFM-Bridging-Header.h";
 			};
 			name = Release;
 		};
