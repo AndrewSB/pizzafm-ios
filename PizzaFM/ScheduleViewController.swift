@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class ScheduleViewController: UIViewController {
-    @IBOutlet weak var scheduleTableView: UITableView!
+    @IBOutlet weak var scheduleTableView: SLExpandableTableView!
     
     var selectedFilter = 0
     let filters = ["Date"]
@@ -36,30 +36,26 @@ class ScheduleViewController: UIViewController {
     }
 }
 
-extension ScheduleViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return filterDictionary[filters[0]]!.count
+extension ScheduleViewController: SLExpandableTableViewDelegate, SLExpandableTableViewDatasource {
+    
+    
+    func tableView(tableView: SLExpandableTableView!, canExpandSection section: Int) -> Bool {
+        return true
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collapsed[section] ? 0 : 5
+    func tableView(tableView: SLExpandableTableView!, needsToDownloadDataForExpandableSection section: Int) -> Bool {
+        return false
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 33))
-        
-        let viewLabel = UILabel(frame: CGRect(x: 11, y: 3, width: 80, height: 22))
-        viewLabel.text = "idufh"
-        
-        view.addSubview(viewLabel)
-        
-        return view
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as! UITableViewCell
-        cell.textLabel?.text = "lol"
-        
+    func tableView(tableView: SLExpandableTableView!, expandingCellForSection section: Int) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCellWithIdentifier("detailCell") as! UITableViewCell
+        cell.textLabel?.text = "ds"
         return cell
     }
+    
+    func tableView(tableView: SLExpandableTableView!, downloadDataForExpandableSection section: Int) {}
+    
+    func tableView(tableView: SLExpandableTableView!, didExpandSection section: UInt, animated: Bool) {}
+    
+    func tableView(tableView: SLExpandableTableView!, didCollapseSection section: UInt, animated: Bool) {}
 }
