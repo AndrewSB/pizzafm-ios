@@ -28,7 +28,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        player = AVPlayer(URL: url)
+        player = AVPlayer(URL: url!)
         player?.play()
         print(player)
         
@@ -62,7 +62,7 @@ class InitialViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/pizzaradio")!)
     }
     @IBAction func webButtonHit(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://pizzafm.org")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://pizzafm.org")!)
     }
 }
 
