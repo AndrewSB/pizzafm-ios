@@ -14,7 +14,6 @@
 		462D7E8E1A200294003CD9C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462D7E8D1A200294003CD9C9 /* Main.storyboard */; };
 		464425091AEFFB000057EC0C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464425081AEFFB000057EC0C /* ScheduleViewController.swift */; };
 		4644250B1AEFFECA0057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
-		4644250C1AEFFFD10057EC0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; };
 		4644250D1AEFFFD10057EC0C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4644250A1AEFFECA0057EC0C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		464425181AF006F60057EC0C /* SLExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 464425171AF006F60057EC0C /* SLExpandableTableView.m */; };
 		465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465CAAA81A7C3CEB004873B6 /* Crashlytics.framework */; };
@@ -72,7 +71,6 @@
 				465CAAAA1A7C3CEB004873B6 /* Crashlytics.framework in Frameworks */,
 				4644250B1AEFFECA0057EC0C /* Alamofire.framework in Frameworks */,
 				465CAAAB1A7C3CEB004873B6 /* Fabric.framework in Frameworks */,
-				4644250C1AEFFFD10057EC0C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +184,9 @@
 		4606681B19E7EEE800DB3ACC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = asb;
 				TargetAttributes = {
 					4606682219E7EEE800DB3ACC = {
@@ -288,6 +288,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -361,6 +362,7 @@
 				INFOPLIST_FILE = PizzaFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "asb.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PizzaFM-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -381,6 +383,7 @@
 				INFOPLIST_FILE = PizzaFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "asb.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PizzaFM-Bridging-Header.h";
 			};

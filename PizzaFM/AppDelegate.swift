@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics()])
 
         var setCategoryError: NSError?
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: &setCategoryError)
-        
+        do { try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback) }        
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
         
         return true

@@ -30,7 +30,7 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         player = AVPlayer(URL: url)
         player?.play()
-        println(player)
+        print(player)
         
         webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://www.pizzafm.org/time.html")!))
     }
